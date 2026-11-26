@@ -286,6 +286,14 @@ ol.steps > li { margin-bottom: 6px; }
   <li><b>Hiện trạng</b>: tiêu đề "CẮT NGANG HIỆN TRẠNG" / "CẮT DỌC HIỆN TRẠNG" – chỉ số liệu đo.</li>
   <li><b>Hoàn công</b> (chỉ trắc ngang): tiêu đề "CẮT NGANG HOÀN CÔNG" – đáy kênh hạ theo bảng đào dư, hàng bảng ghi "Cao độ hoàn công", tiêu đề mặt cắt ghi thêm "Đào dư: 0.10m"; lòng kênh thiết kế cũ vẽ nét đứt ở lớp <b>TKK_KENH_TK</b>. Xuất PDF thành file riêng "… - Hoan cong.pdf".</li>
 </ul>
+<h3 id="khung-ten">Khung tên riêng của công ty</h3>
+<p>Ở cửa sổ <b>In bản vẽ</b>, dòng <b>Khung tên</b> → <b>Chọn file DXF…</b>: chọn file khung bản vẽ của công ty (khung ngoài, khung trong, dải khung tên có tên công trình, chủ đầu tư, người ký, chữ ký vẽ nét, logo). App chèn khung đó vào <b>mọi tờ</b> trắc ngang và trắc dọc, cả DXF lẫn PDF; khổ giấy và chiều cao dải khung tên lấy theo file; tiêu đề CẮT NGANG… / TỶ LỆ vẫn ghi ở trên.</p>
+<ul>
+  <li><b>Chuẩn bị file</b>: trong AutoCAD chỉ để lại 1 khung (vẽ theo mm, đúng khổ A3 420×297…), sửa sẵn tên công trình, rồi <b>Save As → AutoCAD DXF</b>. File DWG thì phải lưu ra DXF trước. Chữ font VNI (VNI-Helve…) app tự đổi sang chữ Unicode.</li>
+  <li><b>Số bản vẽ</b>: ô số BV ghi sẵn dạng "&nbsp;&nbsp;&nbsp;/13" thì app bỏ chữ đó và ghi <b>01/12, 02/12…</b> đúng chỗ; không có thì ghi sau chữ "SỐ BV".</li>
+  <li>Máy nhớ khung dùng lần trước: dự án mới chỉ cần chọn lại ở danh sách Khung tên. Chọn <b>Khung TKK</b> để về khung mặc định.</li>
+  <li>Khung nằm ở lớp <b>TKK_KHUNG_TEN</b> trong block KHUNG_BV – sửa block 1 lần là mọi tờ đổi theo.</li>
+</ul>
 <h3 id="hoan-cong">Mặt cắt hoàn công (đào dư)</h3>
 <p>Vào <b>Công cụ → Mặt cắt hoàn công (đào dư)…</b>: app lập sẵn bảng theo lý trình (mỗi mặt cắt 1 dòng). Gõ <b>đào dư</b> vào cột Đào dư – vd <b>0.1</b> nghĩa là đáy hoàn công thấp hơn đáy thiết kế 0,1 m (số âm = đào thiếu, đáy cao hơn thiết kế); để trống = đúng thiết kế. Cột Đáy HC, S đào TK, S đào HC tự tính; Enter / mũi tên xuống sang dòng dưới.</p>
 <ul>
