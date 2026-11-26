@@ -284,6 +284,16 @@ ol.steps > li { margin-bottom: 6px; }
 <ul>
   <li><b>Thiết kế</b>: tiêu đề "CẮT NGANG THIẾT KẾ" / "CẮT DỌC THIẾT KẾ" – có kênh, đê, đào đắp.</li>
   <li><b>Hiện trạng</b>: tiêu đề "CẮT NGANG HIỆN TRẠNG" / "CẮT DỌC HIỆN TRẠNG" – chỉ số liệu đo.</li>
+  <li><b>Hoàn công</b> (chỉ trắc ngang): tiêu đề "CẮT NGANG HOÀN CÔNG" – đáy kênh hạ theo bảng đào dư, hàng bảng ghi "Cao độ hoàn công", tiêu đề mặt cắt ghi thêm "Đào dư: 0.10m"; lòng kênh thiết kế cũ vẽ nét đứt ở lớp <b>TKK_KENH_TK</b>. Xuất PDF thành file riêng "… - Hoan cong.pdf".</li>
+</ul>
+<h3 id="hoan-cong">Mặt cắt hoàn công (đào dư)</h3>
+<p>Vào <b>Công cụ → Mặt cắt hoàn công (đào dư)…</b>: app lập sẵn bảng theo lý trình (mỗi mặt cắt 1 dòng). Gõ <b>đào dư</b> vào cột Đào dư – vd <b>0.1</b> nghĩa là đáy hoàn công thấp hơn đáy thiết kế 0,1 m (số âm = đào thiếu, đáy cao hơn thiết kế); để trống = đúng thiết kế. Cột Đáy HC, S đào TK, S đào HC tự tính; Enter / mũi tên xuống sang dòng dưới.</p>
+<ul>
+  <li><b>Điền cho tất cả</b>: gõ số rồi bấm Điền → cả cột cùng số, sau đó sửa riêng vài dòng.</li>
+  <li><b>Dán từ Excel</b>: chép 1 cột số trong Excel, bấm vào ô của dòng bắt đầu rồi Ctrl+V → điền từ dòng đó xuống.</li>
+  <li><b>Xem trên hình</b>: đánh dấu ô <b>Mc H.công</b> ở màn hình chính – đáy hoàn công nét đứt xanh lá, ô <b>Zhc</b> ghi cao độ đáy hoàn công mặt cắt đang chọn.</li>
+  <li><b>Xuất KL so sánh (Excel)</b>: bảng từng mặt cắt: chiều dài, đào dư, S đào TK / HC, KL đào TK / HC, chênh lệch – dùng cho quyết toán. File KL thường (nút Xuất file KL) cũng có thêm sheet "Hoan cong" khi đã nhập đào dư.</li>
+  <li><b>In bản vẽ hoàn công…</b>: mở cửa sổ In, đánh dấu sẵn ô Trắc ngang – Hoàn công.</li>
 </ul>
 <h3 id="trac-doc">Bản vẽ trắc dọc</h3>
 <p>Trong <b>Model</b> trắc dọc là <b>1 dải dài liền</b> từ cọc đầu tới cọc cuối, vẽ theo mm giấy như trắc ngang (chữ 2.2; khoảng cách đã thu theo TL ngang 1/2000 – TL đứng 1/200), cột tên hàng và thước cao độ ở đầu dải. Thẻ <b>Layout "CAT DOC THIET KE"</b> (hoặc "CAT DOC HIEN TRANG") chứa các khung A3 xếp cạnh nhau, mỗi khung có 1 khung nhìn tỷ lệ 1:1 (đã khoá, viền khung nhìn nằm ở lớp TKK_KHUNG_NHIN đã tắt sẵn) chạy sát viền khung; mỗi tờ chứa tối đa, tờ sau trùng 2 cọc cuối của tờ trước, tờ cuối dồn sang trái. Sửa hình trong Model thì các tờ trong Layout tự đổi theo. In: vào thẻ Layout, in từng khung (Window) như in trắc ngang.</p>
