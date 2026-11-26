@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hướng dẫn sử dụng TKK 360plus</title>
+<style>
+:root { --ink:#1f2937; --mute:#5b6472; --line:#d9dee7; --acc:#0b5cd5; --soft:#eef4ff; --warn:#fff6e0; --warnb:#e8b64c; --bg:#fff; }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--ink); font:15px/1.6 "Segoe UI", Arial, sans-serif; }
+.wrap { max-width: 860px; margin: 0 auto; padding: 28px 20px 60px; }
+header { border-bottom: 3px solid var(--acc); padding-bottom: 12px; margin-bottom: 20px; }
+header h1 { margin: 0; font-size: 26px; }
+header p { margin: 4px 0 0; color: var(--mute); }
+nav { background: var(--soft); border-radius: 8px; padding: 12px 16px; margin-bottom: 26px; }
+nav ol { margin: 4px 0 0; padding-left: 22px; columns: 2; column-gap: 28px; }
+nav a { color: var(--acc); text-decoration: none; }
+h2 { font-size: 20px; margin: 34px 0 8px; padding-top: 6px; border-top: 1px solid var(--line); }
+h3 { font-size: 16px; margin: 18px 0 4px; }
+kbd { border: 1px solid #b9c0cc; border-bottom-width: 2px; border-radius: 4px; padding: 0 5px; font: 13px Consolas, monospace; background: #f6f7f9; }
+.btn { display: inline-block; border: 1px solid #b9c0cc; border-radius: 4px; padding: 0 6px; background: #f6f7f9; font-size: 13.5px; white-space: nowrap; }
+.path { font-weight: 600; }
+.tip, .warn { border-radius: 8px; padding: 10px 14px; margin: 12px 0; }
+.tip { background: var(--soft); border-left: 4px solid var(--acc); }
+.warn { background: var(--warn); border-left: 4px solid var(--warnb); }
+table { border-collapse: collapse; width: 100%; margin: 8px 0; font-size: 14px; }
+th, td { border: 1px solid var(--line); padding: 5px 8px; text-align: left; vertical-align: top; }
+th { background: #f3f5f9; }
+figure { margin: 14px 0; }
+figure svg { width: 100%; height: auto; border: 1px solid var(--line); border-radius: 8px; background: #fff; }
+figcaption { color: var(--mute); font-size: 13px; text-align: center; margin-top: 4px; }
+ol.steps > li { margin-bottom: 6px; }
+@media (max-width: 640px) { nav ol { columns: 1; } body { font-size: 14.5px; } }
+@media print {
+  nav { display: none; } .wrap { max-width: none; padding: 0; }
+  h2 { page-break-after: avoid; } figure, table, .tip, .warn { page-break-inside: avoid; }
+  a { color: inherit; text-decoration: none; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>Hướng dẫn sử dụng TKK 360plus – Thiết kế Kênh</h1>
+  <p>Dành cho phiên bản <b id="ver">1.1.0</b> · Thiết kế mặt cắt ngang nạo vét kênh, đê 2 bờ, tính khối lượng đào đắp, xuất bản vẽ DXF và bảng Excel.</p>
+</header>
+
+<nav>
+  <b>Nội dung</b>
+  <ol>
+    <li><a href="#cai-dat">Cài đặt và kích hoạt</a></li>
+    <li><a href="#quy-trinh">Quy trình làm một kênh</a></li>
+    <li><a href="#man-hinh">Màn hình chính</a></li>
+    <li><a href="#nhap">Nhập số liệu hiện trạng</a></li>
+    <li><a href="#cong-cu">Công cụ xử lý số liệu</a></li>
+    <li><a href="#thiet-ke">Thiết kế kênh – đê</a></li>
+    <li><a href="#doi-tim">Tự dời tim kênh</a></li>
+    <li><a href="#bzm">Tự chọn B – Z – m</a></li>
+    <li><a href="#can-doi">Cân đối đào – đắp</a></li>
+    <li><a href="#khoi-luong">Khối lượng và xuất Excel</a></li>
+    <li><a href="#tong-hop">Tổng hợp nhiều kênh</a></li>
+    <li><a href="#dxf">In bản vẽ (xuất DXF)</a></li>
+    <li><a href="#luu">Lưu và mở dự án</a></li>
+    <li><a href="#loi">Lỗi thường gặp</a></li>
+    <li><a href="#dieu-khoan">Điều khoản sử dụng</a></li>
+  </ol>
+</nav>
+
+<h2 id="cai-dat">1. Cài đặt và kích hoạt</h2>
+<ol class="steps">
+  <li>Chạy file <span class="path">TKK360plus-Setup-x.y.z.exe</span>. Nếu Windows hiện “Windows protected your PC”, bấm <b>More info → Run anyway</b>.</li>
+  <li>Lần đầu mở app sẽ hiện màn hình kích hoạt với <b>Mã máy</b> của bạn.</li>
+  <li>Muốn dùng thử: gửi <b>Mã máy</b> cho người bán để nhận <b>mã dùng thử</b> (dùng đủ chức năng đến ngày ghi trong mã), dán vào ô và bấm <span class="btn">Kích hoạt</span>. Số ngày còn lại hiện trên thanh tiêu đề.</li>
+  <li>Muốn dùng chính thức: gửi <b>Mã máy</b> cho người bán, nhận lại <b>mã kích hoạt</b>, dán vào ô và bấm <span class="btn">Kích hoạt</span>.</li>
+</ol>
+<div class="warn">Mã kích hoạt gắn với từng máy. Cài lại Windows hoặc đổi máy thì mã máy thay đổi – liên hệ người bán để cấp lại.</div>
+<p>Số phiên bản hiện ở thanh tiêu đề (ví dụ <b>v5</b>) và trong <span class="path">File → Giới thiệu / phiên bản…</span>. Khi báo lỗi, vui lòng ghi kèm số phiên bản.</p>
+
+<h2 id="quy-trinh">2. Quy trình làm một kênh</h2>
+<figure>
+<svg viewBox="0 0 820 120" role="img" aria-label="Quy trình">
+  <defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#0b5cd5"/></marker></defs>
+  <g font-family="Segoe UI, Arial" font-size="13" text-anchor="middle">
+    <g fill="#eef4ff" stroke="#0b5cd5">
+      <rect x="8" y="30" width="110" height="56" rx="8"/><rect x="146" y="30" width="110" height="56" rx="8"/><rect x="284" y="30" width="110" height="56" rx="8"/>
+      <rect x="422" y="30" width="110" height="56" rx="8"/><rect x="560" y="30" width="110" height="56" rx="8"/><rect x="698" y="30" width="114" height="56" rx="8"/>
+    </g>
+    <g fill="#1f2937">
+      <text x="63" y="54">Nhập số liệu</text><text x="63" y="72">hiện trạng</text>
+      <text x="201" y="54">Kiểm tra</text><text x="201" y="72">mép bờ bT / bP</text>
+      <text x="339" y="54">Tự chọn</text><text x="339" y="72">B – Z – m</text>
+      <text x="477" y="54">Thông số đê,</text><text x="477" y="72">cân đối tất cả</text>
+      <text x="615" y="54">Xem khối lượng,</text><text x="615" y="72">xuất Excel</text>
+      <text x="755" y="54">In bản vẽ</text><text x="755" y="72">DXF, lưu dự án</text>
+    </g>
+    <g stroke="#0b5cd5" stroke-width="2" marker-end="url(#ar)">
+      <line x1="118" y1="58" x2="144" y2="58"/><line x1="256" y1="58" x2="282" y2="58"/><line x1="394" y1="58" x2="420" y2="58"/>
+      <line x1="532" y1="58" x2="558" y2="58"/><line x1="670" y1="58" x2="696" y2="58"/>
+    </g>
+  </g>
+</svg>
+<figcaption>Thứ tự làm việc đề nghị cho mỗi kênh</figcaption>
+</figure>
+
+<h2 id="man-hinh">3. Màn hình chính</h2>
+<table>
+  <tr><th style="width:28%">Vùng</th><th>Công dụng</th></tr>
+  <tr><td>Ô thông tin (trái)</td><td>Tên cọc, lý trình, S đào, S đắp của mặt cắt đang chọn.</td></tr>
+  <tr><td>Danh sách mặt cắt</td><td>Chọn mặt cắt; phím <kbd>↑</kbd> <kbd>↓</kbd> để chuyển. Các nút <span class="btn">Copy M.Cắt</span> <span class="btn">Del M.Cắt</span> <span class="btn">▲</span> <span class="btn">▼</span> <span class="btn">Xếp theo lý trình</span>. <b>Copy M.Cắt</b> nhân đôi mặt cắt đang chọn, chèn ngay dưới: tên cọc chạy số tiếp <b>C1 → C2 → C3</b> (lấy số C lớn nhất đang có + 1, không trùng; tên dạng KM0+050 thì đặt theo lý trình mới), lý trình = mặt cắt đang chọn + <b>Bước</b> (ô cạnh nút, mặc định 50 m, app nhớ cho lần sau).</td></tr>
+  <tr><td>Bảng điểm (M.C Hiện trạng)</td><td>Các điểm đo của mặt cắt: khoảng cách lẻ, cao độ, tên điểm. Nút chèn / copy / xoá điểm, đảo chiều mặt cắt. Nút <span class="btn">▲</span> <span class="btn">▼</span> ở dòng <b>Cao độ điểm</b>: nâng / hạ cao độ điểm đang chọn (bấm vào điểm trên hình hoặc chọn dòng trong bảng) mỗi lần 1 bước; bấm giữ thì chạy liên tục. Ô <b>Bước</b> chọn 0.01 / 0.02 / 0.05 / 0.1 m hoặc tự gõ, app nhớ cho lần sau. Tương tự, nút <span class="btn">◄</span> <span class="btn">►</span> ở dòng <b>Khoảng cách</b> giảm / tăng KC lẻ của điểm đang chọn (như gõ tay số mới – các điểm phía sau dịch theo), có ô Bước riêng.</td></tr>
+  <tr><td>Cột phải</td><td>Menu <b>File</b>, menu <b>Công cụ</b> (xử lý số liệu, xem mục 4), nút mở / lưu / in, <span class="btn">Khối lượng</span>, bật tắt hiện mặt cắt hiện trạng / thiết kế.</td></tr>
+  <tr><td>Hình mặt cắt (dưới)</td><td>Tự nhiên màu tím, kênh màu đỏ, đê màu xanh; vùng đào / đắp tô màu; S đào, S đắp ở giữa phía trên. <b>Kéo điểm hiện trạng bằng chuột</b> – xem dưới.</td></tr>
+</table>
+<h3 id="keo-diem">Kéo điểm hiện trạng bằng chuột (kiểu grip AutoCAD)</h3>
+<ul>
+  <li><b>Giữ chuột kéo</b>: đưa chuột tới điểm (con trỏ đổi hình mũi tên 4 chiều), giữ chuột kéo tới chỗ mới, thả ra là đặt.</li>
+  <li><b>Kiểu CAD</b>: bấm 1 lần để chọn điểm, bấm thêm 1 lần vào đúng điểm đang chọn → điểm thành ô vuông đỏ và chạy theo chuột, bấm lần nữa để đặt. <kbd>Esc</kbd> hoặc chuột phải: huỷ, điểm về chỗ cũ.</li>
+  <li>Cạnh chuột hiện số <b>KC … | Z …</b>; S đào, S đắp cập nhật ngay. Làm tròn 0.01 m.</li>
+  <li><b>Chỉ dời đúng 1 điểm</b>: kéo ngang thì sửa KC lẻ của điểm đó và điểm kế tiếp (các điểm khác đứng yên), không vượt qua điểm bên cạnh; kéo lên xuống chỉ đổi cao độ điểm đó.</li>
+  <li><b>Ortho</b>: <kbd>F8</kbd> bật / tắt (app nhớ), hoặc giữ <kbd>Shift</kbd> khi kéo – chỉ kéo đứng hoặc chỉ kéo ngang.</li>
+  <li><b>Hút cao độ</b>: kéo gần ngang cao độ điểm bên cạnh thì tự hút về đúng cao độ đó (hiện đường gióng nét đứt, chữ "hút"); giữ <kbd>Alt</kbd> để tắt.</li>
+  <li><b>Bấm đúp lên đường mặt đất</b> (xa điểm) để chèn 1 điểm mới đúng chỗ đó (cao độ nội suy), rồi kéo chỉnh. Bấm đúp <i>lên điểm</i> vẫn là chọn mép bờ như trước. Xoá điểm dùng nút <span class="btn">Xoá điểm</span>.</li>
+  <li>Mỗi lần đặt điểm là 1 bước hoàn tác (<kbd>Ctrl</kbd>+<kbd>Z</kbd>). Chỉ kéo được điểm hiện trạng; thiết kế (đáy, mái, đê) vẫn chỉnh bằng thông số.</li>
+  <li><b>Chuột phải</b> vào điểm: <i>Xoá điểm</i>, <i>Chèn điểm giữa điểm này và điểm kế</i>, <i>Đặt làm tim</i>, <i>Đặt / bỏ mép bờ</i> (trái hoặc phải theo phía của điểm). Chuột phải lên đường mặt đất: <i>Chèn điểm tại đây</i>.</li>
+</ul>
+<p>Đổi màu giao diện ở <span class="path">File → Giao diện…</span> (4 kiểu: Fluent sáng, Kính mờ đêm, Bản vẽ kỹ thuật, Cực quang).</p>
+<p><b>Màn hình nhỏ</b> (laptop 14", Windows đặt chữ 125%) bị che nút: vào <span class="path">File → Cỡ giao diện…</span> chọn 80% hoặc 90% (phím tắt <kbd>Ctrl</kbd> <kbd>+</kbd> / <kbd>Ctrl</kbd> <kbd>−</kbd> / <kbd>Ctrl</kbd> <kbd>0</kbd>), app nhớ cỡ đã chọn. Hộp thoại nào cao hơn màn hình thì có thanh kéo bên phải.</p>
+
+<h2 id="nhap">4. Nhập số liệu hiện trạng</h2>
+<h3>Từ file đo</h3>
+<p><span class="path">File → Nhập file .htr / .ht3…</span> – đọc toàn bộ mặt cắt trong file, kể cả file của đơn vị khảo sát không có dấu <b>;</b> cuối mỗi mặt cắt (mặt cắt mới bắt đầu ở dòng tên cọc).</p>
+<p><b>Tim mặt cắt được app tự đặt</b> vào giữa lòng kênh nhận diện được, không cần dấu tim trong file: app tìm các chỗ trũng có bờ 2 bên và chọn chỗ trũng <b>nối liền với các mặt cắt trước – sau</b> (kênh chạy suốt tuyến). Ao cá, mương ngắn chỉ có ở 1–2 mặt cắt, hay chỗ thấp sát mép, bị bỏ qua dù sâu hơn kênh. Chỗ nào chưa đúng thì chọn lại tim ở cột <b>T</b> trong bảng điểm.</p>
+<h3>File Nova-TDN (.ntd)</h3>
+<p><span class="path">File → Nhập file .htr / .ht3 / .ntd / .txt…</span> đọc được file <b>.ntd</b> của Nova-TDN, xuất theo cả 2 cách: khoảng cách <b>cộng dồn</b> từ tim (-2, -4, -6…) hoặc khoảng cách <b>lẻ</b> – app tự nhận theo dòng TYPEINPUT. Mỗi cọc (POLE) gồm các điểm bên trái (TARGETL) và bên phải (TARGETR), đi từ tim ra ngoài. Điểm tim là dòng TARGET có khoảng cách 0; file không có dòng đó mà cao độ tim ghi <b>0</b> là chỗ không đo (phần mềm tự điền 0): app vẫn giữ 1 dòng <b>TIM</b> nhưng để trống cao độ (chỉ làm mốc khoảng cách, không vẽ, không tính), nên khoảng cách từ tim tới điểm đo đầu mỗi bên giữ đúng như file. Mặt cắt bị ghi lặp y hệt chỉ lấy 1 lần; cọc không có hoặc chỉ 1 điểm đo thì bỏ – mở xong app báo số mặt cắt lặp và danh sách cọc bị bỏ. Tên cọc giữ như trong file (DT, 1, H1, K0+9…); chỉ tên ghi sai được sửa theo lý trình (vd "Km1+1000.00" → Km1+000).</p>
+<h3>Mở file Excel (.xls / .xlsx)</h3>
+<p><span class="path">File → Mở file Excel (.xls / .xlsx)…</span> – đọc <b>sheet đầu tiên</b>, số liệu kiểu <b>khoảng cách tính từ tim</b>: cột <b>A</b> tên cọc (ghi ở dòng tim, vd K0+025; ghi số như 10, 30 thì hiểu là lý trình mét → K0+010, K0+030), cột <b>B</b> khoảng cách từ tim (âm bên trái, dương bên phải, vd −10 … 0 … 10), cột <b>C</b> cao độ. Mỗi mặt cắt là 1 khối dòng liền, các mặt cắt cách nhau bằng dòng trống. Tên sheet được lấy làm tên công trình. Sau khi mở, tim đặt theo lòng kênh tự nhận diện như khi nhập file .htr.</p>
+<h3>Dán từ Excel</h3>
+<p><span class="path">File → Dán số liệu Excel…</span> – mỗi dòng: <b>Cọc | Lý trình | KC lẻ | Cao độ | Tên điểm</b> (copy thẳng các cột từ Excel). Dòng có ô Cọc là bắt đầu mặt cắt mới; điểm tên <b>TIM</b> được lấy làm tim.</p>
+<h3>Gõ tay</h3>
+<p>Ở khung <b>Nhập số liệu H.trạng</b>: gõ khoảng cách <kbd>Enter</kbd> cao độ <kbd>Enter</kbd> (hoặc bấm nút <span class="btn">OK</span>) là thêm 1 điểm vào cuối mặt cắt – <b>không cần</b> bấm Chèn điểm. Phần <b>Sửa điểm đang chọn</b> bên dưới đường kẻ (Chèn / Copy / Xoá điểm, Đảo chiều, chỉnh cao độ ▲▼, khoảng cách ◄►) là để sửa điểm đang chọn trong bảng, không liên quan tới ô nhập. Gõ <kbd>+</kbd> vào ô khoảng cách rồi <kbd>Enter</kbd> để sang mặt cắt mới. Nút <span class="btn">Thêm mcht</span> thêm mặt cắt trống.</p>
+<h3>Mép bờ bT / bP</h3>
+<p>App tự tìm mép bờ trái (bT) và phải (bP). Nếu chỗ nào tìm chưa đúng, <b>bấm đúp</b> lên điểm trên hình để đặt lại mép bờ. Mép bờ ảnh hưởng đến vị trí đê, bề rộng kênh hiện trạng và việc dời tim.</p>
+<figure>
+<svg viewBox="0 0 820 300" role="img" aria-label="Các ký hiệu trên mặt cắt">
+  <g font-family="Segoe UI, Arial" font-size="13">
+    <!-- mặt đất tự nhiên -->
+    <polyline points="20,120 150,118 240,112 265,122 300,196 350,208 470,212 560,205 600,192 640,128 690,116 800,118" fill="none" stroke="#9b2fae" stroke-width="2.2"/>
+    <!-- đê trái -->
+    <polygon points="70,119 108,80 170,80 204,114" fill="#c7dcfb" stroke="#1f5fc9" stroke-width="2"/>
+    <!-- hố đào -->
+    <polygon points="318,200 368,246 452,246 510,212 470,212 350,208" fill="#f6cdb8" stroke="none"/>
+    <polyline points="318,200 368,246 452,246 510,212" fill="none" stroke="#d11f1f" stroke-width="2.4"/>
+    <!-- tim -->
+    <line x1="410" y1="40" x2="410" y2="285" stroke="#555" stroke-dasharray="7 4 2 4"/>
+    <text x="416" y="54" fill="#333">tim kênh</text>
+    <!-- bT bP -->
+    <circle cx="240" cy="112" r="4" fill="#d11f1f"/><text x="232" y="102" fill="#d11f1f">bT</text>
+    <circle cx="640" cy="128" r="4" fill="#d11f1f"/><text x="644" y="120" fill="#d11f1f">bP</text>
+    <!-- bề rộng kênh hiện trạng -->
+    <line x1="240" y1="30" x2="640" y2="30" stroke="#333" marker-start="url(#t)" marker-end="url(#t)"/>
+    <line x1="240" y1="24" x2="240" y2="104" stroke="#999" stroke-dasharray="3 3"/><line x1="640" y1="24" x2="640" y2="120" stroke="#999" stroke-dasharray="3 3"/>
+    <text x="440" y="24" text-anchor="middle">bề rộng kênh hiện trạng (bT → bP)</text>
+    <!-- B, Z, m -->
+    <line x1="368" y1="264" x2="452" y2="264" stroke="#d11f1f"/><line x1="368" y1="258" x2="368" y2="270" stroke="#d11f1f"/><line x1="452" y1="258" x2="452" y2="270" stroke="#d11f1f"/>
+    <text x="410" y="281" text-anchor="middle" fill="#d11f1f">B đáy</text>
+    <text x="462" y="256" fill="#d11f1f">Z đáy</text>
+    <text x="322" y="236" fill="#d11f1f">m</text><text x="486" y="236" fill="#d11f1f">m</text>
+    <!-- mép hố đào -->
+    <circle cx="318" cy="200" r="3.5" fill="#d11f1f"/><circle cx="510" cy="212" r="3.5" fill="#d11f1f"/>
+    <text x="520" y="228" fill="#333">mép hố đào</text>
+    <!-- đê -->
+    <text x="139" y="72" text-anchor="middle" fill="#1f5fc9">đê trái (đắp)</text>
+    <line x1="204" y1="134" x2="240" y2="134" stroke="#1f5fc9"/><line x1="204" y1="128" x2="204" y2="140" stroke="#1f5fc9"/><line x1="240" y1="128" x2="240" y2="140" stroke="#1f5fc9"/>
+    <text x="222" y="152" text-anchor="middle" fill="#1f5fc9">lưu không</text>
+    <text x="690" y="106" fill="#9b2fae">mặt đất tự nhiên</text>
+  </g>
+</svg>
+<figcaption>Các ký hiệu dùng trong app</figcaption>
+</figure>
+<h3 id="cong-cu">Công cụ xử lý số liệu (menu Công cụ)</h3>
+<table>
+  <tr><th style="width:30%">Lệnh</th><th>Công dụng</th></tr>
+  <tr><td>Kiểm tra số liệu…</td><td>Quét cả kênh, báo: khoảng cách mia lớn hơn ngưỡng (mặc định 3 m), <b>bề rộng lẻ</b> (tổng bề rộng có số thập phân, vd 30.01), mặt cắt ít điểm, <b>điểm trùng</b> (KC = 0, cùng cao độ – hay gặp ngay tim), cao độ nhảy bất thường, bề rộng khác hẳn các mặt cắt khác, mặt cắt <b>trùng y hệt</b> mặt cắt trước (chép nhầm). Đánh dấu ô “Báo cả mặt cắt gần giống” để thấy cả mặt cắt chèn (lệch ≤ 2 cm). Bấm <span class="btn">Xem</span> để nhảy tới mặt cắt đó; nút <span class="btn">Làm tròn bề rộng lẻ…</span> / <span class="btn">Chia điểm chỗ mia &gt; ngưỡng…</span> mở thẳng công cụ sửa, nút <span class="btn">Xoá điểm trùng</span> xoá rồi kiểm tra lại ngay.</td></tr>
+  <tr><td>Tự nhận diện tim kênh</td><td>Đặt lại tim mọi mặt cắt vào giữa lòng kênh (như khi nhập file). Bảng kết quả ghi lòng kênh, tim dời bao nhiêu và chỗ trũng nào bị bỏ qua.</td></tr>
+  <tr><td>Làm tròn bề rộng lẻ…</td><td>Bề rộng kiểu 30.02, 29.98, 30.002 → đưa về số mét tròn (30) bằng cách chỉ chỉnh <b>2 điểm ngoài cùng</b>: phần lẻ chia đôi theo cm cho 2 mép (dư 0.02 → mỗi mép −0.01), lẻ còn lại dồn mép phải. Các điểm giữa giữ nguyên số đo. Lệch quá 10 cm thì không tự sửa (bảng ghi chú để kiểm tra lại). Có bảng xem trước từng mặt cắt.</td></tr>
+  <tr><td>Xoá điểm trùng</td><td>Xoá điểm KC = 0 cùng cao độ với điểm trước (máy đo sinh ra). Điểm KC = 0 khác cao độ (bậc thẳng đứng) được giữ. Tim, mép bờ giữ đúng điểm.</td></tr>
+  <tr><td>Mở rộng mặt cắt…</td><td>Nhập bề rộng cần có rồi chọn <b>Cách mở rộng</b>: <b>Chia đều 2 bên</b> (mặc định – vd đo 26 m, cần 30 m: mỗi mép thêm 2 m) hoặc <b>Cân theo tim</b> (mỗi bên phải cách tim ít nhất nửa bề rộng: bên nào thiếu thì bù bên đó – dùng khi khảo sát bỏ trống 1 bờ). Tick <b>Cắt bớt phần dư cho đúng bề rộng</b> để công cụ chạy 2 chiều: mặt cắt hẹp thì bù, mặt cắt rộng hơn thì gọt (vd khảo sát 35 m, TCVN 30 m: chia đều thì mỗi mép gọt 2.5 m; cân theo tim thì bên nào quá nửa bề rộng gọt bên đó); chỗ gọt có 1 điểm mép mới, cao độ nội suy giữa 2 điểm đo. Điểm thêm cách nhau ≤ khoảng mia tối đa (mặc định 3 m), cao độ kéo ngang bằng điểm mép dao động ±0.02. Bảng xem trước ghi từng mặt cắt bù / gọt bao nhiêu mỗi bên. Điểm thêm hiện <b>màu cam nghiêng</b>; mỗi lần mở công cụ về lại Chia đều, không gọt. Ô <b>Phạm vi</b> (dùng chung cho Chia điểm mia): cả kênh / mặt cắt đang chọn / từ lý trình … đến … / <b>Chọn từng mặt cắt…</b> (tick trong danh sách, cách quãng được, Shift + bấm để tick cả đoạn).</td></tr>
+  <tr><td>Chia điểm mia &gt; 3 m…</td><td>Khoảng mia nào lớn hơn ngưỡng (mặc định 3 m, đúng 3 m vẫn được) thì chèn điểm cách đều, cao độ nằm đúng trên đường nối 2 điểm đo. Điểm chèn hiện <b>màu cam nghiêng</b>.</td></tr>
+  <tr><td>Nội suy mặt cắt…</td><td>Thêm mặt cắt vào giữa 2 mặt cắt đo. <b>Theo lý trình chẵn, cả kênh</b>: đo 50 m 1 mặt cắt (K0+000, K0+050…), nhập 25 → thêm K0+025, K0+075…; lý trình đã có mặt cắt thì bỏ qua. <b>Tại lý trình bất kỳ</b>: nhập 1 hoặc nhiều lý trình (vd đầu cầu, cuối cầu: K0+112, K0+118). Mặt đất nội suy từ 2 mặt cắt hai bên: canh theo tim, lấy đủ vị trí điểm của cả 2, cao độ nội suy theo lý trình; mặt cắt hẹp hơn thì phần thiếu kéo ngang theo điểm mép. Thiết kế lấy theo mặt cắt phía trước (2 mặt cắt giống nhau thì đúng thiết kế đó). Tên mặt cắt mới = lý trình, hiện <b>màu cam nghiêng</b> trong danh sách. Mặt cắt nội suy vẫn tính khối lượng bình thường (trừ phần cầu thì tự làm trong Excel). Có bảng xem trước.</td></tr>
+  <tr><td>Bề rộng khảo sát (Excel)…</td><td>Bảng tính bề rộng khảo sát để lập dự toán khảo sát: <b>bề rộng chân bờ</b> = từ chân mái ngoài bờ (đê) trái tới chân mái ngoài bờ (đê) phải, nhân <b>hệ số</b> (mặc định 1.5 theo TCVN 8478:2018, sửa được), so với <b>bề rộng mặt cắt</b> đo (cột Kiểm tra: Đúng / ***). Bên nào không có đê thì app lấy khoảng cách tim → chân bờ của mặt cắt gần nhất phía trên và phía dưới (không có thì xa hơn), bắt vào điểm đo gần nhất (ghi chú “theo MC gần”). Số chưa ưng thì gõ sửa thẳng vào ô (ô sửa tay hiện màu cam, lưu theo dự án; <span class="btn">Tự tìm lại</span> để bỏ). Ô tick chọn có đưa mặt cắt nội suy vào bảng. <span class="btn">Xuất Excel</span>: kênh đang mở; <span class="btn">Tổng hợp nhiều kênh…</span>: chọn nhiều file dự án → 1 file, mỗi kênh 1 sheet, có dòng Tổng cộng và Trung bình.</td></tr>
+  <tr><td>Chỉnh lòng kênh (nâng / mở rộng)…</td><td>Hộp có 2 việc. <b>Mở rộng lòng kênh</b>: nhập số mét mở thêm (vd 2) – lòng và mặt kênh cùng rộng thêm (lòng 6 m, mặt 7 m → lòng 8 m, mặt 9 m): cả nửa trái (mái, bờ, ruộng) dời ra trái, nửa phải dời ra phải mỗi bên một nửa, đáy nới ra kéo ngang bằng đáy cũ, tim vẫn ở giữa lòng kênh; tick <b>Giữ nguyên bề rộng mặt cắt</b> (mặc định) thì gọt mép ngoài mỗi bên một nửa để mặt cắt về lại bề rộng cũ (30 m → 32 m → 30 m), bỏ tick thì mặt cắt rộng thêm đúng số mét mở. Ô <b>Mặt cắt</b>: cả kênh / mặt cắt đang xem / từ lý trình … đến … / <b>Chọn từng mặt cắt…</b> (tick các mặt cắt trong danh sách, liền nhau hay cách quãng đều được; giữ Shift rồi bấm để tick cả đoạn; nút “Thêm mặt cắt đang xem”). <b>Nâng / hạ cao độ</b>: cộng cùng 1 số vào cao độ điểm đo hiện trạng (vd 0.20; số âm là hạ). Hộp công cụ nằm góc phải, vẫn bấm được hình và danh sách mặt cắt. <b>Nâng lòng kênh</b>: 2 mép bờ (điểm gãy trên cùng của mái kênh, app tự tìm; mặt cắt nào đã bấm đúp chọn mép bờ thì theo mép đó) giữ cố định, mọi điểm nằm giữa được nâng – áp dụng cho cả kênh, mặt cắt đang xem, hoặc từ lý trình … đến …. <b>Nâng phạm vi được chọn</b> (chỉ mặt cắt đang xem): gõ từ điểm … đến điểm … (số thứ tự trong bảng điểm), hoặc bấm <span class="btn">Chọn trên hình</span> rồi bấm điểm đầu, điểm cuối trên hình (Esc để thôi); đoạn chọn hiện chấm cam. Bảng xem trước ghi số điểm nâng, đáy trước / sau, cảnh báo nếu có điểm cao hơn mép bờ. Điểm đã nâng hiện <b>màu cam</b> trong bảng điểm.</td></tr>
+  <tr><td>↶ Hoàn tác (Ctrl+Z)</td><td>Hoàn tác thao tác gần nhất (như nút ↶; xem mục Lưu và mở dự án). Mọi lệnh công cụ đều hoàn tác được, nhiều bước.</td></tr>
+  <tr><td>⚙ Cài đặt…</td><td>(cũng có ở menu File) Các tuỳ chọn nhớ theo máy, mặc định giống bản trước: <b>Ghi diện tích đắp</b> trên bản vẽ mặt cắt ngang (Không: tiêu đề chỉ còn "Đào: S=…", Mẫu 2 bỏ dòng Sđắp – đê vẫn vẽ đủ); <b>Bước nội suy trắc dọc</b> khi xuất (Không / 10 / 20 / 40 / 50 / tự nhập – xem mục 11); <b>Bảng khối lượng có cột đắp</b> (Không: file Excel chỉ có Tên MC, chiều dài, diện tích đào, diện tích TB, khối lượng đào). Nút <span class="btn">Về mặc định</span>.</td></tr>
+</table>
+
+<h2 id="thiet-ke">5. Thiết kế kênh – đê</h2>
+<p>Bấm <span class="btn">M.C Thiết kế</span>. Hộp thoại có 3 thẻ: <b>+ĐÊ TRÁI</b>, <b>+KÊNH GIỮA</b>, <b>+K-Đ PHẢI</b>. Hộp mở đúng mặt cắt đang xem ở màn hình chính, tên cọc đang chỉnh ghi nhỏ phía trên hình; đóng hộp thì màn hình hiện trạng chuyển tới mặt cắt vừa chỉnh (chọn nhóm → mặt cắt đầu nhóm; mặt cắt điển hình → giữ nguyên). Lỡ bấm <b>Tự dời tim kênh</b>, <b>Tự chọn B–Z–m</b>, <b>Cân đối</b>, <b>Xoá sửa riêng</b> hay sửa nhầm thông số thì bấm <span class="btn">↶ Hoàn tác</span> trong hộp (hoặc <kbd>Ctrl</kbd>+<kbd>Z</kbd>), <span class="btn">↷</span> / <kbd>Ctrl</kbd>+<kbd>Y</kbd> để làm lại.</p>
+<ul>
+  <li><b>Mặt cắt điển hình</b> (dòng đầu danh sách): thông số chung cho mọi mặt cắt.</li>
+  <li>Chọn 1 mặt cắt để <b>sửa riêng</b>: ô để trống là theo điển hình; ô <b>màu vàng</b> là đã sửa riêng, danh sách có dấu <b>*</b>. Nút <span class="btn">Xoá sửa riêng MC này</span> để trả về điển hình.</li>
+  <li>Kênh: tim kênh X (so với tim hiện trạng, + là sang phải), cao độ đáy Z, bề rộng đáy B, mái trái / mái phải.</li>
+  <li>Đê: cao độ đỉnh, bề rộng đỉnh, mái trong / ngoài, lưu không (khoảng cách từ mép bờ tới chân đê), bóc phong hoá.</li>
+  <li><b>Chọn nhóm mặt cắt</b> trong danh sách: bấm mặt cắt đầu, giữ <kbd>Shift</kbd> bấm mặt cắt cuối; hoặc <b>giữ chuột kéo</b> qua các dòng; <kbd>Ctrl</kbd> + bấm để thêm / bớt từng mặt cắt. Khi đang chọn nhóm: sửa thông số, <span class="btn">Tự chọn B – Z – m</span>, <span class="btn">Tự dời tim kênh</span>, <span class="btn">Cân đối nhóm</span>, <span class="btn">Xoá sửa riêng nhóm</span> chỉ áp dụng cho nhóm đó.</li>
+  <li><b>Hỏi Áp tất cả / Huỷ</b>: sửa 1 ô ở <b>Mặt cắt điển hình</b> (hoặc ở nhóm) mà có mặt cắt đang để số riêng ô đó (dấu <b>*</b>, vd cao độ đỉnh đê sau khi Cân đối) thì app hỏi: <span class="btn">Áp tất cả</span> (Enter) = mọi mặt cắt (trong nhóm) nhận số mới, bỏ số riêng của <b>đúng ô đó</b> – các ô khác (vd cao độ đê bên kia) giữ nguyên; <span class="btn">Huỷ</span> = trả ô về số cũ, không mặt cắt nào đổi. Không có mặt cắt nào sửa riêng ô đó thì áp luôn, không hỏi. Sửa cao độ đáy Z, độ dốc i hay lý trình mốc ở điển hình thì hỏi theo các mặt cắt có Z đáy riêng.</li>
+  <li>Kéo thanh trượt phía trên hình để dời tim kênh qua trái / phải.</li>
+  <li>Phím <kbd>↑</kbd> <kbd>↓</kbd> trong ô thông số: tăng / giảm 0.1 (giữ <kbd>Shift</kbd>: 1).</li>
+  <li>Thường làm: <span class="btn">Tự chọn B – Z – m</span> (áp dụng là tự dời tim luôn) → <span class="btn">Cân đối tất cả</span>. Nút <span class="btn">Tự dời tim kênh</span> dùng khi bạn tự nhập B, Z, mái bằng tay.</li>
+</ul>
+<div class="tip">Trong phạm vi đê chỉ tính <b>đắp</b>. Chỗ đất tự nhiên cao hơn đường đê được giữ nguyên, không tính đào – nên nâng hạ cao độ đê không làm S đào thay đổi.</div>
+
+<h2 id="doi-tim">6. Tự dời tim kênh</h2>
+<p>Nút <span class="btn">Tự dời tim kênh</span> trong hộp thoại thiết kế. Với mặt cắt có mái hố đào leo lên mái bờ (S đào tăng vọt), app dò tim trong lòng kênh và đặt về <b>giữa vùng ít đào nhất</b> – vừa ít đào vừa cách đều 2 bờ. Mặt cắt không lấn bờ thì giữ nguyên.</p>
+<p>Lòng kênh lấy theo nhận diện của app (xem mục 4), nên hố đào chỉ được dời <b>trong lòng kênh thật</b>, không chạy ra ao hay mương sâu hơn ở mép. Tim đang nằm ngoài lòng kênh thì được đưa vào.</p>
+<p>Bảng kết quả cho biết tim cũ / mới, S đào cũ / mới của từng mặt cắt, và ghi chú chỗ trũng nào đã bỏ qua. Mặt cắt đã chỉnh tim bằng tay (kéo thanh trượt hoặc gõ số) sẽ được bỏ qua.</p>
+
+<h2 id="bzm">7. Tự chọn B – Z – m (chung cả kênh)</h2>
+<p>Nút <span class="btn">Tự chọn B – Z – m</span> tìm bộ <b>B đáy, cao trình đáy Z, hệ số mái m</b> dùng chung cho toàn kênh sao cho mọi mặt cắt đều đào lọt lòng.</p>
+<table>
+  <tr><th style="width:32%">Ô nhập</th><th>Ý nghĩa</th></tr>
+  <tr><td>B đáy từ … đến … bước …</td><td>Khoảng thử bề rộng đáy (thường bước 0.5 m).</td></tr>
+  <tr><td>Z đáy từ … đến … bước …</td><td>Khoảng thử cao trình đáy (thường bước 0.1 m).</td></tr>
+  <tr><td>Mái m</td><td>Các hệ số mái thử, cách nhau bằng dấu <b>;</b> (thường 1; 1.25).</td></tr>
+  <tr><td>Cao độ mép hố đào ≤</td><td>Lọt lòng khi 2 mép hố đào có cao độ không vượt mức này (mặc định +0.6).</td></tr>
+  <tr><td>Đào sâu ≤</td><td>Đáy hố đào thấp hơn đáy lòng kênh hiện trạng không quá mức này (mặc định 1.3 m, để có nhiều phương án chọn).</td></tr>
+  <tr><td>Quy ước mái</td><td>Kênh hiện trạng rộng ≤ 6 m thường dùng m = 1, rộng hơn dùng m = 1.25. Mặc định chỉ gợi ý; đánh dấu <b>Bắt buộc</b> thì chỉ tính mái đúng quy ước.</td></tr>
+</table>
+<p>Bấm <span class="btn">Tính</span>. Mỗi dòng kết quả là 1 cặp (m, Z) với <b>B đáy lớn nhất</b> đạt, đào sâu lớn nhất, bề rộng miệng trung bình, V đào toàn kênh và <b>mặt cắt khống chế</b> (mặt cắt sẽ không đạt nếu tăng B thêm 1 bước). Bấm <span class="btn">Áp dụng</span> ở dòng muốn dùng: app đặt thông số cho mặt cắt điển hình, xoá B / Z / m sửa riêng (có hỏi trước) và dời tim từng mặt cắt về giữa vùng lọt lòng.</p>
+<div class="tip">Sau khi áp dụng, bấm <span class="btn">Cân đối tất cả</span> để dò lại cao độ đê theo S đào mới.</div>
+<p><b>Kênh đổi cỡ</b> (vd 3000 m đầu rộng 10 m, 3000 m sau rộng 6 m): mặc định app vẫn chọn 1 thông số cho cả kênh. Nếu kênh có 2 đoạn liền nhau, mỗi đoạn dài từ 1/3 kênh trở lên, bề rộng chênh từ 30% trở lên, bảng kết quả hiện <b>gợi ý tách 2 thông số</b> kèm nút <span class="btn">Chọn đoạn 1</span> / <span class="btn">Chọn đoạn 2</span>: bấm để bôi đen sẵn đoạn đó rồi bấm <span class="btn">Tự chọn B – Z – m</span> – kết quả ghi thành thông số riêng của đoạn, điển hình cả kênh giữ nguyên. Cả kênh tối đa 2 thông số.</p>
+
+<h2 id="can-doi">8. Cân đối đào – đắp</h2>
+<ul>
+  <li><b>K</b> (mặc định 1.07): S đắp cần = ROUND(S đào, 2) / K.</li>
+  <li><b>Tỷ lệ Trái / Phải</b> (mặc định 50 / 50): chia đất đắp cho 2 đê. Mặt cắt nào khác tỷ lệ thì sửa riêng ở thẻ +ĐÊ TRÁI.</li>
+  <li><span class="btn">Cân đối MC này</span> / <span class="btn">Cân đối tất cả</span>: app dò cao độ đỉnh đê từng bên (2 bên chênh không quá 1 m), lấy ít số lẻ nhất mà tổng đắp vẫn khớp.</li>
+  <li>Địa hình gãy làm một bên không nhận đúng tỷ lệ được thì phần dư dồn sang bên kia, có ghi chú trong bảng kết quả.</li>
+</ul>
+
+<h2 id="khoi-luong">9. Khối lượng và xuất Excel</h2>
+<p>Nút <span class="btn">Khối lượng</span> (hoặc <span class="path">File → Bảng khối lượng…</span>) hiện bảng khối lượng theo phương pháp trung bình mặt cắt. Bấm <span class="btn">Xuất Excel</span> để ra file .xlsx: có công thức ROUND, cột kiểm tra “Đúng / ***” (so S đắp với S đào / K) và dòng tổng.</p>
+<p>Cột <b>Tên MC</b> trong file Excel ghi <b>lý trình K0+050</b> (mặt cắt chưa có hoặc trùng lý trình thì ghi tên cọc); bảng trên màn hình vẫn hiện tên cọc. <span class="path">Công cụ → Cài đặt</span> → <b>Bảng khối lượng có cột đắp = Không</b> thì file chỉ có phần đào.</p>
+<p>Ô <b>Làm tròn khối lượng</b> (dưới bảng): <b>Số nguyên – ROUND 0</b> (mặc định, như mẫu cũ) hoặc <b>2 số lẻ – ROUND 2</b>. Áp dụng cho khối lượng từng đoạn trong file Excel và cho cả Tổng hợp KL nhiều kênh; app nhớ lựa chọn theo dự án.</p>
+<div class="warn">Nếu cột kiểm tra có “***”, mặt cắt đó chưa cân đối xong – chạy lại Cân đối cho mặt cắt đó.</div>
+
+<h2 id="tong-hop">10. Tổng hợp nhiều kênh</h2>
+<ol class="steps">
+  <li>Lưu từng kênh thành file dự án <b>.json</b>.</li>
+  <li><span class="path">File → Tổng hợp KL nhiều kênh…</span> → <span class="btn">Chọn file dự án…</span> (giữ <kbd>Ctrl</kbd> để chọn nhiều file). <span class="btn">Thêm dự án đang mở</span> để thêm kênh đang làm.</li>
+  <li>Sửa <b>Hạng mục công trình</b> và <b>Địa điểm xây dựng</b> ngay trong bảng; ▲ ▼ đổi thứ tự, ✕ bỏ kênh. Tên và địa điểm được nhớ cho lần sau.</li>
+  <li><span class="btn">Xuất Excel tổng hợp</span>: sheet <b>TỔNG KHỐI LƯỢNG KÊNH</b> + mỗi kênh 1 sheet chi tiết. Số liệu ở sheet tổng là công thức lấy từ dòng Tổng của từng sheet, sửa sheet chi tiết thì sheet tổng tự cập nhật.</li>
+</ol>
+
+<h2 id="dxf">11. In bản vẽ (xuất DXF)</h2>
+<p><span class="path">File → In bản vẽ (xuất DXF)…</span> hoặc nút 🖨. Cửa sổ có 2 thẻ <b>Trắc ngang</b> / <b>Trắc dọc</b> để chỉnh thông số riêng của từng loại, phần <b>chung</b> (khổ giấy, kiểu khung, chiều cao chữ, hệ số bề rộng chữ) dùng cho cả hai.</p>
+<table>
+  <tr><th style="width:32%">Thẻ Trắc ngang</th><th>Ghi chú</th></tr>
+  <tr><td>Kiểu mẫu bản vẽ</td><td><b>Mẫu TKK</b> (mặc định) hoặc <b>Mẫu 2</b>: thước cao độ mảnh ghi số mỗi 1 m, dưới cùng "MSS: …"; bảng có cột số thứ tự 1, 2, 3… theo thứ tự <i>Khoảng cách thiết kế – Cao độ thiết kế – Cao độ tự nhiên – Khoảng cách lẻ</i> (+ K/C cộng dồn nếu chọn Có), bảng kẻ vàng, chữ đầu hàng xanh lá (lớp TKK_BANG_M2, TKK_TIEU_DE_M2, TKK_THUOC_M2); lý trình và Sđào / Sđắp nằm trong ô bo góc màu hồng bên trái thước (lớp TKK_TEN_MC_M2, ô rộng 22 mm, lý trình chữ 2.5, Sđào / Sđắp chữ 2.3 căn giữa, lấn ra trái bảng 4.5 mm – mặt cắt tự dời vào cho khỏi đụng khung); thước chạy xuống tới bảng, "MSS: …" bên trái thước; tên hàng trong bảng căn giữa, không còn dòng tên phía trên hình nên mặt cắt thấp hơn, dễ xếp 2 hàng. Khung theo mẫu: lề 8 mm (trái 20 mm), dải khung tên dưới đáy mặc định <b>42.5 mm</b> (chỉnh ở ô <b>Bề rộng dải dưới đáy</b> phần chung – khi chọn Mẫu 2 ô này ghi "– Mẫu 2" và giữ số riêng, áp dụng cả trắc dọc); hàng khoảng cách cao 4 mm; mọi chữ số trong bảng, thước, tên hàng, MSS đều cao 2.0 như file mẫu (không theo ô Chiều cao chữ số); mặc định <b>không</b> có hàng K/C cộng dồn (chọn Có nếu cần, khi đó mặt cắt cao thêm 8 mm). Nhờ bảng chỉ 24 mm nên A4 có dải 42.5 mm vẫn xếp 2 hàng mặt cắt kênh thường ở 1/200. Trắc dọc vẫn dùng khung TKK. Hình mặt cắt, ghi chú m=…, kích thước như Mẫu TKK; cột tên hàng vẫn rộng 30 mm.</td></tr>
+  <tr><td>Số cột / hàng</td><td>Mặc định 2 cột, số hàng tự động (thử 3 → 2 → 1 hàng, lấy số hàng nhiều nhất mà mọi tờ đều vừa – các tờ xếp đều nhau). Khổ A4 khung có dải ký tên vẫn xếp được 2 hàng với mặt cắt kênh thường ở 1/200.</td></tr>
+  <tr><td>Tiết kiệm giấy (xếp riêng từng tờ)</td><td>Mặc định <b>Không</b>. Chọn <b>Có</b>: cả file vẫn 1 tỷ lệ, nhưng mỗi tờ nhét thêm mặt cắt kế tiếp chừng nào còn vừa (tối đa số hàng đang chọn) – tờ có mặt cắt thấp xếp nhiều hàng, mặt cắt cao (đê cao, kênh sâu) nằm riêng 1 tờ. Ít tờ hơn nhưng các tờ không đều nhau.</td></tr>
+  <tr><td>Chiều cao hàng số</td><td>Chiều cao 3 hàng số dựng đứng trong bảng (Cao độ hiện trạng, K/C cộng dồn, Cao độ thiết kế) cố định 8 mm – vừa khít số dài nhất, thấp hơn thì số lòi ra khỏi hàng.</td></tr>
+  <tr><td>Ký hiệu tim</td><td>Bản vẽ <b>thiết kế</b>: tim đặt giữa đáy kênh thiết kế (trục để thi công cắm tim) – kênh đã dời tim thì tim dời theo. Bản vẽ <b>hiện trạng</b>: tim ở cọc tim khảo sát (khoảng cách 0).</td></tr>
+  <tr><td>Dòng tên mặt cắt</td><td>Đắp cả 2 bên thì ghi tách: <b>Đắp: S=(0.71<sup>T</sup>+0.46<sup>P</sup>)= 1.17m²</b> (T bên trái, P bên phải tim kênh; Mẫu 2 thêm dòng "(T 0.71 + P 0.46)" trong ô diện tích).Lý trình + S đào, S đắp nằm sát trên hình (chừa đủ chỗ kích thước đỉnh đê, ký hiệu cao độ, ký hiệu tim).</td></tr>
+  <tr><td>Tỷ lệ</td><td>Tự động hoặc chọn (thường 1/200).</td></tr>
+  <tr><td>Mức so sánh</td><td>Tự động theo từng mặt cắt (dưới điểm thấp nhất ít nhất 1.4 m, làm tròn xuống bước 0.5 m: đáy -1.10 → mức -2.5) hoặc chọn 1 mức chung. Tự động luôn chừa đủ chỗ cho kích thước bề rộng đáy kênh, ký hiệu cao độ đáy và kích thước lưu không (tỷ lệ nhỏ hơn thì chừa sâu hơn). Chọn tay: mức nào làm các ghi chú này đụng bảng thì danh sách ghi <b>(đụng)</b>, chọn trúng thì dòng thông tin báo đỏ tên mặt cắt bị đụng và mức gần nhất không đụng. Thước cao độ dừng ở mét chẵn, số ghi ngay mép giao đen / trắng.</td></tr>
+  <tr><td>Số khoảng cách</td><td>Ghi gọn như phần mềm cũ: 0.43 → .43, 2.00 → 2.0, 1.50 → 1.5. Ô hẹp thì chữ giữ chiều cao, ép bề rộng cho vừa.</td></tr>
+  <tr><td>Khoảng cách giữa các mặt cắt</td><td>Mặc định 2 mm. Cả nhóm mặt cắt canh giữa khung theo chiều ngang và dọc.</td></tr>
+  <tr><td>Số tờ mỗi hàng</td><td>Các tờ trắc ngang trong Model xếp từ trái sang phải, đủ số tờ này (mặc định 10) thì xuống hàng mới (hàng 1 trên cùng). Nhập 0 để xếp tất cả trên 1 hàng ngang. Trắc dọc không đổi (các tờ nằm cạnh nhau trong thẻ Layout).</td></tr>
+  <tr><th>Thẻ Trắc dọc</th><th></th></tr>
+  <tr><td>Tỷ lệ ngang / tỷ lệ đứng</td><td>Mặc định TL ngang 1/2000 (theo chiều dài kênh), TL đứng 1/200 (cao độ). Bản vẽ ghi <i>(TL ngang 1/2000 ; TL đứng 1/200)</i>.</td></tr>
+  <tr><td>Mức so sánh</td><td>Tự động (1 mức chung cả kênh) hoặc chọn.</td></tr>
+  <tr><td>Nội suy theo bước</td><td>Đặt ở <span class="path">Công cụ → Cài đặt → Bước nội suy</span>: Không (mặc định – theo các mặt cắt đo) / 10 / 20 / 40 / 50 / tự nhập. Ví dụ đo 50 m 1 mặt cắt, chọn 20 → trắc dọc chỉ lấy các điểm K0+020, K0+040, K0+060… (lý trình chẵn theo bước), <b>luôn giữ cọc đầu và cọc cuối</b> kênh, điểm sát cọc đầu / cuối dưới 1 m thì bỏ. Cao độ bờ trái, bờ phải, đáy HT, đáy TK nội suy thẳng giữa 2 mặt cắt đo kề bên. Chỉ ảnh hưởng bản vẽ xuất ra.</td></tr>
+  <tr><th>Chung</th><th></th></tr>
+  <tr><td>Tiêu đề bản vẽ (trắc ngang)</td><td>Mặc định <b>Có</b>. Chọn <b>Không</b>: bỏ dòng "CẮT NGANG THIẾT KẾ / HIỆN TRẠNG" và dòng tỷ lệ (giữ ô tên kênh, số bản vẽ) để vùng vẽ cao thêm 3 mm – dùng khi khung tên của đơn vị đã ghi tên bản vẽ và tỷ lệ. Trắc dọc luôn có tiêu đề.</td></tr>
+  <tr><td>Khổ giấy</td><td>Mặc định A3 nằm ngang.</td></tr>
+  <tr><td>Kiểu khung</td><td><b>Có dải trống dưới đáy</b> (để dán khung ký tên của đơn vị, ô <b>Bề rộng dải dưới đáy</b> tự nhập, mặc định 20 mm) hoặc <b>không có dải dưới</b> (hình dùng hết chiều cao tờ), hoặc <b>khung tên đứng bên phải</b> (dải trống dọc mép phải để dán khung tên đứng, ô <b>Bề rộng dải</b> tự nhập, mặc định 40 mm; tiêu đề, tên kênh, số bản vẽ và vùng vẽ dời vào trong; trắc dọc mỗi tờ hẹp lại nên có thể thêm tờ). Dùng chung cho trắc ngang và trắc dọc. Khung là block <i>KHUNG_BV</i>: sửa 1 lần, mọi tờ đổi theo.</td></tr>
+  <tr><td>Chiều cao chữ, hệ số bề rộng chữ</td><td>Chữ số trong bảng.</td></tr>
+  <tr><td>Độ dày nét in (mm)</td><td>Chọn độ dày nét cho từng nhóm: mặt cắt hiện trạng (mặc định 0.25), mặt cắt thiết kế – kênh, đê, đáy TK trắc dọc (mặc định 0.50), tim, đường gióng, khung bảng (mặc định mảnh). App ghi vào <b>độ dày nét (lineweight) của lớp</b>, không vẽ width cứng – mở trong AutoCAD vẫn chỉnh lại được ở Layer hoặc bảng nét in; bật nút <b>LWT</b> để thấy độ dày trên màn hình. Kiểu nét giữ như app đã đặt.</td></tr>
+</table>
+<p><b>Chọn bản vẽ cần xuất</b> bằng 4 ô đánh dấu (Trắc ngang / Trắc dọc × Thiết kế / Hiện trạng), rồi bấm <b>Xuất DXF</b>: mỗi loại ra 1 file DXF 2000 trong cùng thư mục – <b>Cat ngang TK.dxf</b>, <b>Cat ngang HT.dxf</b>, <b>Cat doc TK.dxf</b>, <b>Cat doc HT.dxf</b>. App nhớ các ô đã chọn. Thư mục đã có file trùng tên thì app hỏi có ghi đè không.</p>
+<p><b>Tên mặt cắt trên bản vẽ = lý trình</b> (v9): tiêu đề mặt cắt ngang ghi <b>K0+050 Đào: …</b>, hàng cuối trắc dọc là <b>Lý trình</b> (K0+000, K0+050…) thay cho tên cọc. Mặt cắt <b>chưa có lý trình hoặc trùng lý trình</b> (vd file .htr tên C1, C2… không có lý trình nên đều là 0) thì ghi tên cọc như cũ, xuất xong app báo tên các mặt cắt đó. File .ntd của Nova lấy lý trình ở cột riêng nên tên cọc (DT, H1, A…) không ảnh hưởng.</p>
+<p><b>Kiểm tra trước khi xuất</b> (DXF và PDF): app soát trước, không có gì thì xuất luôn; có chỗ nên xem lại thì hiện bảng – trùng / chưa có lý trình, danh sách chưa xếp theo lý trình, mặt cắt không có đào (đáy thiết kế cao hơn mặt đất), đắp lệch cân đối (khi dự án đã chạy Cân đối), mặt cắt vượt khung. Nút <span class="btn">Xem</span> nhảy tới mặt cắt đó, <span class="btn">Xuất luôn</span> nếu vẫn muốn xuất. Chỉ cảnh báo, không chặn.</p>
+<h3 id="pdf">Xuất PDF</h3>
+<p>Nút <span class="btn">Xuất PDF</span> trong cửa sổ In: in thẳng ra PDF, không cần AutoCAD. Ra <b>2 file</b> theo các ô đã đánh dấu: <b>… - Thiet ke.pdf</b> (cắt dọc thiết kế rồi tới các tờ cắt ngang thiết kế) và <b>… - Hien trang.pdf</b> (cắt dọc hiện trạng rồi cắt ngang hiện trạng); tên file theo tên công trình. PDF vẽ từ đúng bộ lệnh vẽ của file DXF nên bố cục, khung, khổ giấy, tỷ lệ y như bản DXF; in <b>đen trắng</b> giống AutoCAD plot với monochrome.ctb: độ dày nét theo mục <b>Độ dày nét in</b> (nhóm để Mặc định in 0.25 mm như CAD), kiểu nét, chữ Arial cùng cỡ và hệ số rộng, mẫu tô đào ANSI35 / đắp HOUND; viền ngoài khung (lớp Defpoints) không in. Bản chạy trên trình duyệt (không cài) thì mở trang in – chọn máy in <i>Save as PDF</i>, lề 0.</p>
+<ul>
+  <li><b>Thiết kế</b>: tiêu đề "CẮT NGANG THIẾT KẾ" / "CẮT DỌC THIẾT KẾ" – có kênh, đê, đào đắp.</li>
+  <li><b>Hiện trạng</b>: tiêu đề "CẮT NGANG HIỆN TRẠNG" / "CẮT DỌC HIỆN TRẠNG" – chỉ số liệu đo.</li>
+</ul>
+<h3 id="trac-doc">Bản vẽ trắc dọc</h3>
+<p>Trong <b>Model</b> trắc dọc là <b>1 dải dài liền</b> từ cọc đầu tới cọc cuối, vẽ theo mm giấy như trắc ngang (chữ 2.2; khoảng cách đã thu theo TL ngang 1/2000 – TL đứng 1/200), cột tên hàng và thước cao độ ở đầu dải. Thẻ <b>Layout "CAT DOC THIET KE"</b> (hoặc "CAT DOC HIEN TRANG") chứa các khung A3 xếp cạnh nhau, mỗi khung có 1 khung nhìn tỷ lệ 1:1 (đã khoá, viền khung nhìn nằm ở lớp TKK_KHUNG_NHIN đã tắt sẵn) chạy sát viền khung; mỗi tờ chứa tối đa, tờ sau trùng 2 cọc cuối của tờ trước, tờ cuối dồn sang trái. Sửa hình trong Model thì các tờ trong Layout tự đổi theo. In: vào thẻ Layout, in từng khung (Window) như in trắc ngang.</p>
+<p>Cách lấy số liệu giống phần mềm cũ: <b>đáy kênh HT</b> = điểm thấp nhất trong lòng kênh, <b>bờ trái / phải HT</b> = điểm cao nhất mỗi bên, <b>đáy kênh TK</b> = cao trình đáy thiết kế tại cọc. Bảng gồm cao độ, khoảng cách, K/C cộng dồn (tính từ đầu kênh), lý trình (cọc đầu và cuối kênh viết đứng). Chỗ cọc sát nhau, chữ số và tên cọc tự thu xuống cỡ 2 và dời sang bên cho khỏi chồng (cọc, đường dóng, khoảng cách giữ đúng vị trí). Có phần GHI CHÚ kiểu nét từng đường ở tờ 1. Mỗi đường nằm ở 1 lớp riêng (TKK_TD_BO_TRAI, TKK_TD_BO_PHAI, TKK_TD_DAY_HT – màu như mặt đất; TKK_TD_DAY_TK – màu như kênh) để dễ chỉnh trong CAD.</p>
+<p><b>Lớp và màu bản vẽ</b> (bộ màu riêng của TKK 360plus, tên lớp bắt đầu bằng <b>TKK_</b>): lý trình, tên hàng bảng, mức so sánh – <b>TKK_TIEU_DE</b> xanh (140); chữ Đào / Đắp – <b>TKK_NHAN</b> cam (30); mặt đất hiện trạng – <b>TKK_MAT_DAT</b> nâu (33) nét đứt; kênh thiết kế, chữ m=… và hatch đào – <b>TKK_KENH</b>, <b>TKK_CHU_KENH</b>, <b>TKK_HATCH_DAO</b> xanh ngọc (4); đê, chữ m=… và hatch đắp – <b>TKK_DE</b>, <b>TKK_CHU_DE</b>, <b>TKK_HATCH_DAP</b> xanh dương (5); tim – <b>TKK_TIM</b> xanh lá (86); đường dóng – <b>TKK_DONG_TK</b> xanh dương (5), <b>TKK_DONG_HT</b> xanh lá (86) nét chấm; khung trong – <b>TKK_KHUNG_TRONG</b> xanh ngọc; bảng, số, kích thước – trắng. Trắc dọc: đường hiện trạng màu như mặt đất, đáy thiết kế màu như kênh. Muốn đổi màu thì chỉnh màu lớp trong AutoCAD (mọi đối tượng màu ByLayer).</p>
+<div class="tip"><b>Cần file DWG?</b> Mở file DXF trong AutoCAD rồi <b>Save As → DWG</b>, hoặc dùng phần mềm miễn phí <b>ODA File Converter</b> để đổi hàng loạt. <b>Không</b> đổi đuôi .dxf thành .dwg – file sẽ không mở được.</div>
+<h2 id="luu">12. Lưu và mở dự án</h2>
+<div class="tip"><b>Tự sao lưu</b> (bản cài): cứ 5 phút, nếu có thay đổi chưa lưu, app ghi 1 bản dự phòng vào <i>Documents\TKK360plus\Sao luu</i> (tên công trình + ngày giờ, mỗi công trình giữ 10 bản mới nhất); trước khi mở dự án khác / tạo mới cũng ghi 1 bản. Mất điện hay tắt nhầm: mở lại app thấy thông báo <b>Khôi phục bản làm dở</b> – số liệu đã được mở lại đúng chỗ đang làm, nhớ bấm Lưu. Cần bản cũ hơn: <span class="path">File → Mở bản sao lưu…</span> (chọn bản theo giờ, mở xong bấm Lưu thành… để lưu lại thành file dự án).</div>
+<div class="tip"><b>Báo bản mới</b>: mở app khi có mạng, nếu đã có bản mới app hiện các điểm mới và nút <span class="btn">Tải về</span> (tải xong mở file cài đè, mã kích hoạt và dữ liệu giữ nguyên); <span class="btn">Để sau</span> thì hôm sau mới nhắc lại. Kiểm tra tay: <span class="path">File → Kiểm tra bản mới</span>.</div>
+<ul>
+  <li><span class="path">File → Lưu dự án</span> (nút 💾, <kbd>Ctrl</kbd>+<kbd>S</kbd>) – như Word: dự án đã lưu hoặc vừa mở từ file .json thì <b>ghi đè ngay</b> vào đúng file đó, không hỏi gì; dự án mới (chưa lưu lần nào, hoặc vừa nhập file .htr / Excel / .ntd) thì hỏi chỗ lưu và tên file. Mỗi lần lưu app ghi cùng lúc:
+    <ul>
+      <li><b>Tên.json</b> – dự án của TKK 360plus (toàn bộ số liệu và thiết kế);</li>
+      <li><b>Tên.htr</b> – số liệu hiện trạng;</li>
+      <li><b>Tên.txt</b> – file thiết kế dạng text (hiện trạng, mép bờ, thiết kế kênh – đê từng mặt cắt);</li>
+      <li><b>Tên.ddd</b> – bảng khối lượng dạng text.</li>
+    </ul></li>
+  <li><span class="path">File → Lưu thành…</span> (nút <span class="btn">Lưu thành</span>, <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>S</kbd>): hộp Save As của Windows – chọn thư mục và gõ tên mới; từ đó nút Lưu ghi vào file mới này. Thanh tiêu đề hiện tên file đang làm, dấu <b>*</b> là còn thay đổi chưa lưu.</li>
+  <li><b>Hoàn tác / Làm lại</b> như Word: <kbd>Ctrl</kbd>+<kbd>Z</kbd> / <kbd>Ctrl</kbd>+<kbd>Y</kbd> hoặc nút <span class="btn">↶</span> <span class="btn">↷</span> (rê chuột vào nút để xem thao tác sẽ hoàn tác). Áp dụng cho mọi thao tác: sửa điểm, cao độ, tim, mép bờ, thêm / xoá / copy mặt cắt, thông số thiết kế, các lệnh menu Công cụ. Gõ liền 1 ô tính là 1 bước; nhớ 50 bước gần nhất. Mở / tạo dự án khác thì lịch sử hoàn tác bắt đầu lại.</li>
+  <li><span class="path">File → Nhập file .htr / .ht3 / .txt</span>: chọn file <b>thiết kế .txt</b> để mở luôn cả hiện trạng, mép bờ và thiết kế kênh, đê từng mặt cắt. Tên công trình, tên cọc trong file .txt là chữ không dấu.</li>
+  <li><span class="path">File → Mở dự án…</span> (nút 📂): mở lại file đã lưu.</li>
+  <li><span class="path">File → Xuất số liệu hiện trạng…</span>: xuất số liệu hiện trạng <b>đã xử lý xong</b> (làm tròn bề rộng, xoá điểm trùng, chia mia, mở rộng / gọt, nâng lòng kênh, nội suy mặt cắt…) để dùng cho phần mềm khác – tick chọn:
+    <ul>
+      <li><b>Excel (.xlsx)</b>: cột A lý trình / tên cọc (ở dòng tim), B khoảng cách từ tim (âm trái, dương phải), C cao độ, D tên cọc riêng (nếu khác lý trình); các mặt cắt cách nhau dòng trống – đúng kiểu file Excel mở được bằng app;</li>
+      <li><b>Nova-TDN (.ntd)</b>: kiểu khoảng cách lẻ (TYPEINPUT 0 1) như Nova xuất, có điểm tim;</li>
+      <li><b>.htr</b>: kiểu phần mềm cũ.</li>
+    </ul>
+    Khoảng cách tính từ <b>tim lòng kênh hiện tại</b> (cột T trong bảng điểm); điểm do app thêm (màu cam) cũng được xuất. Tim không đo thì dòng tim để trống cao độ (chỉ làm mốc).</li>
+  <li>App cũng tự nhớ phiên làm việc gần nhất, nhưng hãy <b>lưu dự án thường xuyên</b> và sao lưu file ra chỗ khác.</li>
+</ul>
+
+<h2 id="loi">13. Lỗi thường gặp</h2>
+<table>
+  <tr><th style="width:36%">Hiện tượng</th><th>Cách xử lý</th></tr>
+  <tr><td>Màn hình nhỏ, không thấy nút OK / Cân đối</td><td><span class="path">File → Cỡ giao diện…</span> chọn 80–90%, hoặc kéo thanh kéo bên phải hộp thoại.</td></tr>
+  <tr><td>Hố đào nằm ở ao / mương thay vì kênh</td><td><span class="path">Công cụ → Tự nhận diện tim kênh</span> rồi <span class="btn">Tự dời tim kênh</span>; mặt cắt app báo “không nhận ra lòng kênh” thì chọn tim tay ở cột T.</td></tr>
+  <tr><td>Mái đào leo lên bờ</td><td>Kiểm tra mép bờ bT / bP (bấm đúp để đặt lại), rồi bấm <span class="btn">Tự dời tim kênh</span> hoặc <span class="btn">Tự chọn B – Z – m</span>.</td></tr>
+  <tr><td>Tự chọn B – Z – m không có dòng nào đạt</td><td>Xem cột “mặt cắt khống chế”; mở rộng khoảng Z, giảm B nhỏ nhất, hoặc kiểm tra số liệu mặt cắt đó.</td></tr>
+  <tr><td>Excel báo “***”</td><td>Chạy <span class="btn">Cân đối MC này</span> cho mặt cắt đó; đọc ghi chú trong bảng kết quả cân đối.</td></tr>
+  <tr><td>CAD báo lỗi khi mở DXF</td><td>File DXF 2000 mở được trên AutoCAD 2000 trở lên, GstarCAD, ZWCAD… Nếu vẫn lỗi, gửi file DXF và số phiên bản cho người bán.</td></tr>
+  <tr><td>Hết hạn dùng thử</td><td>Gửi mã máy cho người bán để nhận mã kích hoạt hoặc mã gia hạn.</td></tr>
+</table>
+
+<h2 id="dieu-khoan">14. Điều khoản sử dụng</h2>
+<ol>
+  <li>Phần mềm được cấp phép sử dụng theo từng máy đã kích hoạt; không sao chép, bán lại, cho thuê hoặc chia sẻ mã kích hoạt cho máy khác.</li>
+  <li>Không dịch ngược, chỉnh sửa hoặc vượt qua cơ chế kích hoạt của phần mềm.</li>
+  <li>Phần mềm là công cụ hỗ trợ tính toán. Người thiết kế <b>có trách nhiệm kiểm tra</b> số liệu đầu vào, kết quả tính toán, bản vẽ và khối lượng trước khi sử dụng cho hồ sơ; tác giả không chịu trách nhiệm về thiệt hại phát sinh do sử dụng kết quả khi chưa kiểm tra.</li>
+  <li>Số liệu dự án của bạn chỉ được lưu trên máy của bạn; phần mềm không gửi số liệu ra ngoài.</li>
+  <li>Bản cập nhật sửa lỗi trong cùng phiên bản chính được cung cấp theo thoả thuận với người bán.</li>
+</ol>
+<p style="color:var(--mute);margin-top:30px">TKK 360plus – Hướng dẫn sử dụng. In ra PDF: bấm <kbd>Ctrl</kbd>+<kbd>P</kbd> → chọn “Microsoft Print to PDF”.</p>
+</div>
+<svg width="0" height="0" style="position:absolute"><defs><marker id="t" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M5,0 L5,10" stroke="#333" stroke-width="2"/></marker></defs></svg>
+<script>
+// lấy số phiên bản từ app (cửa sổ mở từ app) để khỏi lệch
+try { const v = window.opener && window.opener.document.getElementById('appVer'); if (v && v.textContent) document.getElementById('ver').textContent = v.textContent.replace(/^v/, ''); } catch (e) {}
+</script>
+</body>
+</html>
