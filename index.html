@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TKK 360plus – Thiết kế kênh</title>
+<meta name="description" content="TKK 360plus – phần mềm thiết kế kênh, đê: nhập số liệu hiện trạng, thiết kế mặt cắt, cân đối đào đắp, khối lượng Excel, xuất bản vẽ DXF và PDF.">
+<meta property="og:title" content="TKK 360plus – Thiết kế kênh">
+<meta property="og:description" content="Thiết kế kênh – đê, khối lượng đào đắp, bản vẽ cắt ngang, cắt dọc DXF / PDF.">
+<style>
+:root{--bg:#f4f7fb;--card:#fff;--tx:#1b2330;--mut:#5d6b80;--pri:#0a64d8;--pri2:#0b4fb0;--bd:#d8e0ec;--acc:#e8f0fd}
+@media (prefers-color-scheme:dark){:root{--bg:#0e1420;--card:#161f2e;--tx:#e6ecf5;--mut:#9aa8bd;--pri:#4c9bff;--pri2:#7db6ff;--bd:#263246;--acc:#1b2a42}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.6 "Segoe UI",Arial,sans-serif}
+a{color:var(--pri)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+header{background:linear-gradient(135deg,#0a3f8f,#0a64d8 60%,#13a3c9);color:#fff}
+header .wrap{padding-top:44px;padding-bottom:52px}
+.brand{font-size:14px;letter-spacing:.12em;text-transform:uppercase;opacity:.85}
+h1{font-size:clamp(30px,5vw,46px);line-height:1.15;margin:8px 0 12px}
+.lead{font-size:18px;max-width:640px;opacity:.95;margin:0 0 26px}
+.dl{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.btn{display:inline-block;padding:12px 20px;border-radius:8px;text-decoration:none;font-weight:600;border:2px solid transparent}
+.btn.main{background:#fff;color:#0a3f8f}
+.btn.ghost{border-color:rgba(255,255,255,.7);color:#fff}
+.ver{font-size:14px;opacity:.85;margin-top:12px}
+section{padding:44px 0}
+h2{font-size:26px;margin:0 0 18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:18px 20px}
+.card h3{margin:0 0 6px;font-size:17px}
+.card p{margin:0;color:var(--mut);font-size:15px}
+.steps{counter-reset:s;list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.steps li{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:14px 18px 14px 56px;position:relative}
+.steps li::before{counter-increment:s;content:counter(s);position:absolute;left:16px;top:13px;width:28px;height:28px;border-radius:50%;background:var(--pri);color:#fff;font-weight:700;text-align:center;line-height:28px}
+.news{background:var(--acc);border-radius:10px;padding:18px 22px}
+.news ul{margin:8px 0 0;padding-left:20px}
+footer{border-top:1px solid var(--bd);padding:24px 0 40px;color:var(--mut);font-size:14px}
+@media (max-width:560px){header .wrap{padding-top:30px;padding-bottom:36px}.btn{width:100%;text-align:center}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="brand">TKK 360plus</div>
+    <h1>Thiết kế kênh – đê<br>nhanh, đúng, ra bản vẽ ngay</h1>
+    <p class="lead">Nhập số liệu hiện trạng, thiết kế mặt cắt, cân đối đào đắp, tính khối lượng và xuất bản vẽ cắt ngang, cắt dọc ra DXF hoặc PDF – trong một phần mềm.</p>
+    <div class="dl">
+      <a class="btn main" id="dlWin" href="#tai-ve">Tải cho Windows 10 / 11</a>
+      <a class="btn ghost" id="dlW7" href="#tai-ve">Bản cho Windows 7</a>
+    </div>
+    <div class="ver" id="verTxt"></div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>Làm được gì</h2>
+    <div class="grid">
+      <div class="card"><h3>Nhập số liệu đủ kiểu</h3><p>File Nova .ntd, .htr, .ht3, .txt, Excel, dán từ Excel hoặc gõ tay. Tự nhận tim lòng kênh, soát lỗi số liệu, nội suy mặt cắt.</p></div>
+      <div class="card"><h3>Sửa mặt cắt bằng chuột</h3><p>Kéo điểm hiện trạng như grip AutoCAD, Ortho F8, tự hút cao độ, chuột phải để xoá / chèn điểm, đặt tim, mép bờ.</p></div>
+      <div class="card"><h3>Thiết kế kênh – đê</h3><p>Mặt cắt điển hình áp cả tuyến, sửa riêng từng mặt cắt hoặc từng nhóm. Tự chọn B – Z – m, tự dời tim.</p></div>
+      <div class="card"><h3>Cân đối đào – đắp</h3><p>Tự dò cao độ đỉnh đê để S đắp = S đào / K, chia tỷ lệ đê trái / phải.</p></div>
+      <div class="card"><h3>Khối lượng Excel</h3><p>Bảng khối lượng theo trung bình mặt cắt, có công thức, cột kiểm tra; tổng hợp nhiều kênh vào 1 file.</p></div>
+      <div class="card"><h3>Bản vẽ DXF và PDF</h3><p>Cắt ngang, cắt dọc theo lý trình, khung bản vẽ, độ dày nét in. PDF in đen trắng giống AutoCAD plot, không cần mở CAD.</p></div>
+      <div class="card"><h3>An toàn dữ liệu</h3><p>Tự sao lưu dự án, mất điện mở lại vẫn còn bản làm dở. Hoàn tác nhiều bước như Word.</p></div>
+      <div class="card"><h3>Tự báo bản mới</h3><p>Có bản cập nhật, app tự báo khi mở – bấm tải về và cài đè, giữ nguyên mã kích hoạt.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="tai-ve" style="padding-top:0">
+  <div class="wrap">
+    <h2>Cài đặt</h2>
+    <ol class="steps">
+      <li>Tải bộ cài đúng máy: <b>Windows 10 / 11</b> hoặc <b>Windows 7</b> (nút phía trên).</li>
+      <li>Mở file vừa tải, bấm cài như phần mềm bình thường. Windows hỏi thì chọn <i>Vẫn chạy</i>.</li>
+      <li>Mở app, gửi <b>mã máy</b> hiện trên màn hình cho nhà cung cấp để nhận mã kích hoạt.</li>
+      <li>Đã có bản cũ: cài đè lên, mã kích hoạt và dữ liệu giữ nguyên.</li>
+    </ol>
+    <p style="margin-top:18px">Xem <a href="huong-dan.html">hướng dẫn sử dụng đầy đủ</a>.</p>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="news" id="news"><b>Có gì mới</b><div id="newsBody">Đang tải…</div></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© TKK 360plus – phần mềm thiết kế kênh. Liên hệ nhà cung cấp để nhận mã kích hoạt.</div>
+</footer>
+
+<script>
+// đọc version.json: số bản, link tải, các điểm mới (app cũng đọc file này để báo bản mới)
+fetch('version.json', { cache: 'no-store' }).then(r => r.json()).then(j => {
+  if (j.win) document.getElementById('dlWin').href = j.win;
+  if (j.win7) document.getElementById('dlW7').href = j.win7;
+  document.getElementById('verTxt').textContent = `Bản mới nhất: ${j.ver}${j.date ? ' – ' + j.date : ''}`;
+  const ul = document.createElement('ul');
+  for (const x of j.items || []) { const li = document.createElement('li'); li.textContent = x; ul.appendChild(li); }
+  const nb = document.getElementById('newsBody'); nb.textContent = `Bản ${j.ver}:`; nb.appendChild(ul);
+}).catch(() => { document.getElementById('newsBody').textContent = ''; });
+</script>
+</body>
+</html>
