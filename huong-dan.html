@@ -278,6 +278,15 @@ ol.steps > li { margin-bottom: 6px; }
   <tr><td>Độ dày nét in (mm)</td><td>Chọn độ dày nét cho từng nhóm: mặt cắt hiện trạng (mặc định 0.25), mặt cắt thiết kế – kênh, đê, đáy TK trắc dọc (mặc định 0.50), tim, đường gióng, khung bảng (mặc định mảnh). App ghi vào <b>độ dày nét (lineweight) của lớp</b>, không vẽ width cứng – mở trong AutoCAD vẫn chỉnh lại được ở Layer hoặc bảng nét in; bật nút <b>LWT</b> để thấy độ dày trên màn hình.</td></tr>
   <tr><td>Kiểu nét</td><td>Ô thứ hai cạnh độ dày nét: <b>Mặc định</b> (kiểu nét app đặt sẵn cho từng lớp), <b>Liền</b>, <b>Đứt</b>, <b>Đứt ngắn</b>, <b>Đứt dài</b>, <b>Gạch chấm</b>, <b>Gạch 2 chấm</b>, <b>Chấm</b>. Ghi vào kiểu nét (linetype) của lớp trong DXF và áp cho PDF. Các đường trắc dọc (bờ trái, bờ phải, đáy HT, đáy TK) luôn giữ kiểu nét riêng để phân biệt.</td></tr>
 </table>
+<h3 id="binh-do">Bình đồ tuyến duỗi thẳng</h3>
+<p>Tim tuyến được kéo thẳng thành trục ngang theo lý trình; mỗi mặt cắt cho khoảng cách từ tim tới mép bờ, đáy kênh, chân đê… rồi app nối các mặt cắt liền nhau thành đường. Bờ trái (nhìn xuôi lý trình) nằm phía trên. Không cần nhập thêm số liệu.</p>
+<ul>
+  <li><b>Xem trên màn hình</b>: ô <b>BĐ Tuyến</b> ở cột phải (bấm <b>MC Ngang</b> để về hình mặt cắt). Chọn <b>Thiết kế</b> / <b>Hiện trạng</b>; lăn chuột zoom, kéo chuột dời hình, bấm đúp về vừa khung; <b>bấm vào 1 lý trình</b> để mở mặt cắt đó. Sửa số liệu / thiết kế thì bình đồ vẽ lại.</li>
+  <li><b>Bản hiện trạng</b>: tim tuyến đo, mép bờ kênh hiện trạng 2 bên, đáy kênh hiện trạng (điểm thấp nhất), ký hiệu mái từ bờ xuống đáy, giới hạn đo (nét đứt mảnh).</li>
+  <li><b>Bản thiết kế</b>: tim kênh thiết kế, mép miệng + đáy kênh thiết kế có ký hiệu mái taluy, chân trong / chân ngoài đê đắp kiểu "Dap Trai" (vạch nét trong quay vào kênh, nét ngoài quay ra ngoài), kèm mép bờ hiện trạng để đối chiếu.</li>
+  <li><b>In</b>: cửa sổ In → thẻ <b>Bình đồ</b> chọn tỷ lệ (1/200, 1/500, 1/1000, 1/2000; mặc định 1/1000), đánh dấu ô <b>Bình đồ</b> (Thiết kế / Hiện trạng) ở bảng Xuất bản vẽ → Xuất DXF ra <b>Binh do TK.dxf</b> / <b>Binh do HT.dxf</b>, Xuất PDF thì bình đồ nằm đầu file Thiết kế / Hiện trạng. Trong Model là 1 dải liền; thẻ Layout "BINH DO…" mỗi tờ xếp nhiều dải chồng nhau (mỗi dải 1 khung nhìn đã khoá), dải sau trùng 8 mm với dải trước.</li>
+  <li><b>Lớp</b>: tim – <b>tim</b> (màu 2, nét CENTER), lý trình – <b>Lytrinh</b>, mái – <b>TALUY</b>, đắp – <b>Dap Trai</b> (màu 110), mép bờ / đáy HT – <b>TKK_BD_BO_HT</b>, <b>TKK_BD_DAY_HT</b>, kênh TK – <b>TKK_BD_KENH</b>, gióng mặt cắt – <b>TKK_BD_MAT_CAT</b>. Độ dày / kiểu nét theo mục <b>Độ dày nét in – Kiểu nét</b>.</li>
+</ul>
 <h3 id="xem-truoc">Xem trước tờ in</h3>
 <p>Nút <span class="btn">👁 Xem trước</span> trên thanh tiêu đề cửa sổ In bật / tắt khung xem trước: <b>cài đặt bên trái, tờ giấy bên phải</b>, vẽ đúng như bản PDF (đen trắng, nét theo độ dày / kiểu nét đã chọn, cả khung tên riêng). Đổi tỷ lệ, số cột, số hàng, mức so sánh, khổ giấy, khung, nét… là tờ xem trước vẽ lại ngay.</p>
 <ul>
