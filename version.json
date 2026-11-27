@@ -14,7 +14,11 @@
   "Công cụ → Cài đặt",
   "Mặt cắt hoàn công",
   "Nút 🔍 góc phải trên hình mặt cắt",
-  "Khung tên riêng"
+  "Khung tên riêng",
+  "Xem trước tờ in ngay trong cửa sổ In bản vẽ",
+  "Xuất DXF / PDF / file KL xong hiện nút Mở file",
+  "Kiểu nét theo từng loại đường",
+  "Bảng khối lượng"
  ],
  "page": "https://tkk360plus.github.io/",
  "win": "https://github.com/tkk360plus/tkk360plus.github.io/releases/download/v9/TKK360plus-Setup-v9.exe",
